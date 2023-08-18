@@ -15,5 +15,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+
+    - name: Create monitors
+      uses: arnaud-ritti/nr-monit@main
+      with:
+        config: "_monitors.yml" # (Required) Your configuration file, default : _monitors.yml
+        api_key: a7c7061481254d5ab340df738d41a103FFFFNRAL
       
 
