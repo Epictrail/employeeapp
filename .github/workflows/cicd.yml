@@ -16,16 +16,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-  new_relic:
-    name: New Relic Monitor
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@main
-
-      - name: new-relic-exporter
-        uses: newrelic-experimental/gha-new-relic-exporter@latest
-
 
       
 
